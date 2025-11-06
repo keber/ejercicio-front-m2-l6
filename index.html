@@ -7,13 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Introducción al Machine Learning</title>
 </head>
 
 <body>
     <div class="container bg-primary-subtle">
         <header class="text-center">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Introducción al Machine Learning</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -145,17 +146,27 @@
                 ciertas heurísticas para validar sus resultados.
             </p>
             </section>
+
+                
         </main>
 
         <footer>
-            <p>Aprende más sobre Aprendizaje Automático en plataformas populares como <a
-                    href="https://coursera.org">Coursera</a>, <a href="https://edx.org">edX</a> y <a
-                    href="https://udacity.com">Udacity</a>.</p>
+            <p>Aprende más sobre Aprendizaje Automático en plataformas populares como 
+                <a href="https://coursera.org">Coursera</a>, 
+                <a href="https://edx.org">edX</a> y 
+                <a href="https://udacity.com">Udacity</a>.
+                
+                
+            </p>
+            <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="assets/js/utils.js"></script>
 </body>
 
 </html>
