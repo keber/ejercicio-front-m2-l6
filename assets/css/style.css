@@ -17,7 +17,7 @@ h1 {
 img {
     height: 300px;
     width: 400px;
-    margin:auto;
+    margin: auto;
 }
 
 .container {
@@ -32,4 +32,85 @@ img {
     justify-content: center;
     text-align: center;
     display: block;
+}
+
+:root {
+    --img-max: 400px;
+    --blur: 34px;
+    --fade: 8%;
+}
+
+.hero-extend {
+    position: relative;
+    min-height: 40vh;
+    overflow: hidden;
+}
+
+.hero-extend::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: center/cover no-repeat url('assets/img/curso-Aplicaciones-Machine-Learning-ciencia-datos-online.jpg');
+    filter: blur(var(--blur)) saturate(120%);
+    transform: scale(1.15);
+    z-index: 0;
+
+    .text-shadow {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.hero-extend .content {
+    position: relative;
+    z-index: 1;
+    /* por encima del fondo borroso */
+}
+
+.hero-img {
+    max-width: min(100%, var(--img-max));
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* centrado horizontal */
+    border-radius: 8px;
+    /* opcional */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    /* opcional */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 0;
+    /*background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent var(--fade));*/
+    z-index: 2;
+    pointer-events: none;
+}
+
+.overlay-box {
+    pointer-events: auto;
+    /* sí permite seleccionar/clicar el texto */
+    max-width: 1100px;
+    /* MÁS ancho que la imagen */
+    width: min(92vw, 1100px);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .6);
+    /* opcional “glass” suave para contraste: */
+    background: rgba(0, 0, 0, .30);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, .15);
+}
+
+.overlay-actions {
+    margin-top: .75rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
