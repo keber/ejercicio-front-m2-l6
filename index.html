@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Introducción al Machine Learning</title>
+    <style>
+        :root {
+            --img-max: 400px;
+            --blur: 34px;
+            --fade: 8%;
+        }
+
+        .hero-extend {
+            position: relative;
+            min-height: 40vh;
+            overflow: hidden;
+        }
+
+        .hero-extend::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: center/cover no-repeat url('assets/img/curso-Aplicaciones-Machine-Learning-ciencia-datos-online.jpg');
+            filter: blur(var(--blur)) saturate(120%);
+            transform: scale(1.15);
+            z-index: 0;
+
+            .text-shadow {
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .hero-extend .content {
+            position: relative;
+            z-index: 1;
+            /* por encima del fondo borroso */
+        }
+
+        .hero-img {
+            max-width: min(100%, var(--img-max));
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* centrado horizontal */
+            border-radius: 8px;
+            /* opcional */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            /* opcional */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 1rem 0;
+            /*background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent var(--fade));*/
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .overlay-box{
+            pointer-events: auto;      /* sí permite seleccionar/clicar el texto */
+            max-width: 1100px;         /* MÁS ancho que la imagen */
+            width: min(92vw, 1100px);
+            text-shadow: 0 2px 10px rgba(0,0,0,.6);
+            /* opcional “glass” suave para contraste: */
+            background: rgba(0,0,0,.30);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            border: 1px solid rgba(255,255,255,.15);
+        }
+
+        .overlay-actions{
+            margin-top: .75rem;
+            display: flex;
+            gap: .5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Introducción al Machine Learning</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="container-fluid hero-extend d-flex align-items-center">
+                <div class="container-fluid text-center position-relative">
+                    <div class=row>
+                        <div class="col-12 text-center">
+                            <picture class="hero-img">
+                                <source srcset="assets/img/curso-Aplicaciones-Machine-Learning-ciencia-datos-online.webp"
+                                    type="image/webp">
+                                <source srcset="assets/img/curso-Aplicaciones-Machine-Learning-ciencia-datos-online.jpg"
+                                    type="image/jpeg">
+                                <img class="hero-img"
+                                    src="assets/img/curso-Aplicaciones-Machine-Learning-ciencia-datos-online.jpg"
+                                    alt="Ícono de Machine Learning">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-overlay w-100 px-3">
+                    <div class="overlay-box text-center text-white">
+                        <h1 class="mb-1">Fundamentos del Machine Learning</h1>
+                        <p class="mb-0">Introducción y conceptos clave</p>
+
+                        <div class="overlay-actions">
+                            <a href="#" class="btn btn-primary btn-sm" role="button" aria-label="Apúntate al curso">Apúntate al curso</a>
+                            <a href="#" class="btn btn-outline-light btn-sm" role="button" aria-label="Comienza tu demo gratuita">Comienza tu demo gratuita</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        </header>
+
+        <main>
+            <section>
+                <h2>¿Qué es el Machine Learning?</h2>
+                <p>Machine Learning es una rama de la inteligencia artificial que permite a los sistemas aprender y
+                    mejorar a partir de la experiencia sin ser programados explícitamente.</p>
+            </section>
+
+            <section>
+                <h2>Tipos de Aprendizaje Automático</h2>
+                <ul>
+                    <li>Aprendizaje Supervisado</li>
+                    <li>Aprendizaje No Supervisado</li>
+                    <li>Aprendizaje por Refuerzo</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Aplicaciones Comunes</h2>
+                <ol>
+                    <li>Reconocimiento de Imágenes</li>
+                    <li>Procesamiento del Lenguaje Natural</li>
+                    <li>Sistemas de Recomendación</li>
+                    <li>Vehículos Autónomos</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <p>Aprende más sobre Aprendizaje Automático en plataformas populares como <a
+                    href="https://coursera.org">Coursera</a>, <a href="https://edx.org">edX</a> y <a
+                    href="https://udacity.com">Udacity</a>.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
