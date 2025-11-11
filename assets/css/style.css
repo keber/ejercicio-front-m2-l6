@@ -101,3 +101,14 @@ h1, .h1 , h2, .h2 {
   display: none; /* Hidden by default */
   /* Add other styling like z-index, background-color, etc. as needed */
 }
+
+.slide-card {
+    width: 60%;
+    max-width: 900px;
+    background-color: #fff8dc; /* cornsilk: destaca sobre azul claro */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    color: #0f172a;
+}
+/* Centrado vertical si hace falta y altura mínima */
+.carousel-item .slide-row { width: 100%; min-height: 250px; }
